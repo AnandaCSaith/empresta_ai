@@ -1,4 +1,5 @@
 import 'package:empresta_ai_app/theme/tema.dart';
+import 'package:empresta_ai_app/view/login_view.dart';
 import 'package:flutter/material.dart';
 
 class EmprestaAiApp extends StatelessWidget {
@@ -11,14 +12,8 @@ class EmprestaAiApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: TemaEmprestaAi.claro(),
       darkTheme: TemaEmprestaAi.escuro(),
-      home: Scaffold(
-        body: Center(
-          child: FilledButton(
-            onPressed: (){}, 
-            child: Text("Botão padrão do EmprestaAi"),
-          ),
-        ),
-      )
+      home: LoginView(),
+
     );
   }
 
