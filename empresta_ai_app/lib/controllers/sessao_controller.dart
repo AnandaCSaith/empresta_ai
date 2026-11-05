@@ -5,13 +5,15 @@ class SessaoController extends ChangeNotifier{
   static final _formatoSenha = RegExp(r'^\d{4}');
 
   String? _apartamento = "";
+  String? get aparttamento => _apartamento;
+  bool get logado => _apartamento != null;
 
 
   //region Validações apartamento e senha
 
 
   //Retorna uma mensagem de erro se apartamento for null
-  String? validarApartamento(String apto){
+  String? validarApartamento(String? apto){
     if (apto == null || apto.trim().isEmpty){
       return "Informe o bloco e apartamento";
     }
@@ -22,7 +24,7 @@ class SessaoController extends ChangeNotifier{
     return null;
   }
 
-  String? validarSenha(String senha){
+  String? validarSenha(String? senha){
     if(senha == null || !_formatoSenha.hasMatch(senha)){
       return "A senha deve estar no padrão de 4 caracteres";
     }
