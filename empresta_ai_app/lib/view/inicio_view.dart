@@ -1,8 +1,10 @@
 //Estrutura principal com navegação inferior (tap bar) - Aula 11
+import 'package:flutter/material.dart';
 import 'package:empresta_ai_app/controllers/itens_controller.dart';
 import 'package:empresta_ai_app/controllers/sessao_controller.dart';
 import 'package:empresta_ai_app/view/perfil_view.dart';
-import 'package:flutter/material.dart';
+import 'package:empresta_ai_app/view/itens_view.dart';
+
 
 class InicioView extends StatefulWidget{
   const InicioView({super.key, required this.sessao, required this.itens});
@@ -19,9 +21,9 @@ class InicioView extends StatefulWidget{
 
   @override
   Widget build(BuildContext context) {
-    //As abas 1 e 2 ainda provisórias: chegam nas issues #6 e #8.
+    //As abas 2 ainda provisórias: chegam nas issues #8.
     final abas = [
-      const Center(child: Text('Lista de itens: chega na issue #6')),
+      ItensView(controller: widget.itens),
       const Center(child: Text('Meus pedidos: chega na issue #8')),
       PerfilView(sessao: widget.sessao),
     ];
@@ -44,7 +46,7 @@ class InicioView extends StatefulWidget{
           NavigationDestination(
             icon: Icon(Icons.person_outlined), 
             selectedIcon: Icon(Icons.person),
-            label: 'Pedidos',
+            label: 'Perfil',
           ),
         ]
       ),

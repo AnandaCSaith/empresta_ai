@@ -5,7 +5,7 @@ class SessaoController extends ChangeNotifier{
   static final _formatoSenha = RegExp(r'^\d{4}');
 
   String? _apartamento = "";
-  String? get aparttamento => _apartamento;
+  String? get apartamento => _apartamento;
   bool get logado => _apartamento != null;
 
 
