@@ -3,6 +3,7 @@ import 'package:empresta_ai_app/theme/tema.dart';
 import 'package:empresta_ai_app/widgets/item_card.dart';
 import 'package:flutter/material.dart';
 
+//Lista de itens disponíveis no condomínio, com busca (Aula 9 e 11).
 class ItensView extends StatelessWidget{
   const ItensView({super.key, required this.controller});
 
