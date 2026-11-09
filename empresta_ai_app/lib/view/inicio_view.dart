@@ -4,8 +4,9 @@ import 'package:empresta_ai_app/controllers/itens_controller.dart';
 import 'package:empresta_ai_app/controllers/sessao_controller.dart';
 import 'package:empresta_ai_app/view/perfil_view.dart';
 import 'package:empresta_ai_app/view/itens_view.dart';
+import 'package:empresta_ai_app/view/pedidos_view.dart';
 
-
+/// Estrutura principal com navegação inferior (tap bar) - Aula 11.
 class InicioView extends StatefulWidget{
   const InicioView({super.key, required this.sessao, required this.itens});
 
@@ -24,7 +25,7 @@ class InicioView extends StatefulWidget{
     //As abas 2 ainda provisórias: chegam nas issues #8.
     final abas = [
       ItensView(controller: widget.itens),
-      const Center(child: Text('Meus pedidos: chega na issue #8')),
+      PedidosView(controller: widget.itens),
       PerfilView(sessao: widget.sessao),
     ];
 
